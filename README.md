@@ -32,7 +32,7 @@ The clock digits use **Geist Regular** from your local font installation, with t
 - **Location, clock, and weather:** Set the city and coordinates in Location settings. The clock follows your Mac’s time zone; current weather comes from Open-Meteo.
 - **Background:** On-device dithered clouds drift behind the clock, which flips each minute.
 - **Upcoming prayer:** Shows the next prayer, start time, and countdown using prayer times from Aladhan.
-- **Device status:** Shows Bluetooth, Wi-Fi, and battery status, with low-battery and unplug prompts.
+- **Device status:** Shows Bluetooth, Wi-Fi, and battery status, with low-battery and unplug prompts. The unplug prompt and caution icon appear only at 80% or above while charging; both stay hidden when running on battery power.
 - **AirPods battery:** Shows the last known earbuds and case percentages for the configured AirPods.
 - **System statistics:** Shows live CPU, GPU, and memory readings with recent history graphs.
 - **Agents:** Shows whether Claude, Codex, and Cursor are running.
