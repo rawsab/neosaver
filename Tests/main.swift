@@ -119,11 +119,11 @@ for (percentage, level) in [(0, 25), (37, 25), (38, 50), (62, 50), (63, 75), (87
 check(BatteryStatus(percentage: 12, isCharging: true).symbol == "battery.100percent.bolt", "Charging overrides the battery level icon")
 check(BatteryStatus.from(["Type": "UPS", "Current Capacity": 100, "Max Capacity": 100]) == nil, "External power sources are not the Mac's battery")
 check(BatteryStatus.from(["Type": "InternalBattery", "Current Capacity": 1, "Max Capacity": 0]) == nil, "Invalid capacity is unavailable")
-for (percentage, expected) in [(0, "• CHARGE"), (25, "• CHARGE"), (26, nil), (79, nil), (80, "• UNPLUG"), (100, "• UNPLUG")] as [(Int, String?)] {
+for (percentage, expected) in [(0, "• CHARGE"), (25, "• CHARGE"), (26, nil), (79, nil), (80, "• UNPLUG"), (85, "• UNPLUG"), (100, "• UNPLUG")] as [(Int, String?)] {
     for charging in [false, true] {
         let status = DeviceStatus(bluetooth: .on, wifiConnected: true,
                                   battery: BatteryStatus(percentage: percentage, isCharging: charging))
-        let expectedPrompt = percentage <= 25 && charging ? nil : expected
+        let expectedPrompt = (percentage <= 25 && charging) || (percentage >= 80 && !charging) ? nil : expected
         check(status.batteryPrompt == expectedPrompt, "Battery prompt threshold at \(percentage)% while charging=\(charging)")
     }
 }
