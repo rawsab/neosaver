@@ -25,8 +25,8 @@ cat > "$SAVER/Contents/Info.plist" <<'PLIST'
 <key>CFBundleDisplayName</key><string>Neosaver</string>
 <key>CFBundleExecutable</key><string>Neosaver</string>
 <key>CFBundlePackageType</key><string>BNDL</string>
-<key>CFBundleVersion</key><string>1</string>
-<key>CFBundleShortVersionString</key><string>0.1.0</string>
+<key>CFBundleVersion</key><string>2</string>
+<key>CFBundleShortVersionString</key><string>0.1.1</string>
 <key>NSBluetoothAlwaysUsageDescription</key><string>Neosaver displays Bluetooth power and connected-device status.</string>
 <key>LSMinimumSystemVersion</key><string>13.0</string>
 <key>NSPrincipalClass</key><string>NeosaverView</string>
@@ -40,8 +40,8 @@ cat > "$APP/Contents/Info.plist" <<'PLIST'
 <key>CFBundleName</key><string>Neosaver Preview</string>
 <key>CFBundleExecutable</key><string>NeosaverPreview</string>
 <key>CFBundlePackageType</key><string>APPL</string>
-<key>CFBundleVersion</key><string>1</string>
-<key>CFBundleShortVersionString</key><string>0.1.0</string>
+<key>CFBundleVersion</key><string>2</string>
+<key>CFBundleShortVersionString</key><string>0.1.1</string>
 <key>NSBluetoothAlwaysUsageDescription</key><string>Neosaver displays Bluetooth power and connected-device status.</string>
 <key>LSMinimumSystemVersion</key><string>13.0</string>
 <key>NSHighResolutionCapable</key><true/>
