@@ -1,0 +1,33 @@
+name: Publish Neosaver v0.1.0
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/publish-neosaver-release.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Restore the verified screensaver archive
+        run: |
+          gh api "repos/$GH_REPO/git/blobs/f2a4a2dadc79b191c93ceab0dbfc4b5fe13afbdf" --jq .content | base64 --decode > Neosaver.saver.zip
+          echo "5dbdee2f1dd6d30c209c74428b74ff7a787bef42cefb0df93ad6dd586af8523d  Neosaver.saver.zip" | sha256sum --check -
+      - name: Publish release
+        run: |
+          cat > release-notes.md <<'NOTES'
+          A personal macOS screensaver with a flip clock, weather, prayer countdown, CPU/GPU and memory graphs, agent activity, and device battery status.
+
+          Download Neosaver.saver.zip, unzip it, and double-click Neosaver.saver to install.
+
+          Requires macOS 13 or later. Universal build for Apple silicon and Intel. Ad hoc signed; not notarized.
+          NOTES
+          gh release create v0.1.0 Neosaver.saver.zip --target "1b5483612e5f99c8111a447a0e25162f17ff55a0" --title "Neosaver v0.1.0" --notes-file release-notes.md
