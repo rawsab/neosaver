@@ -66,7 +66,7 @@ struct DeviceStatus: Codable {
     var batteryPrompt: String? {
         guard let battery else { return nil }
         if battery.percentage <= 25 && !battery.isCharging { return "• CHARGE" }
-        if battery.percentage >= 80 { return "• UNPLUG" }
+        if battery.percentage >= 80 && battery.isCharging { return "• UNPLUG" }
         return nil
     }
     static let unavailable = DeviceStatus(bluetooth: .unavailable, wifiConnected: false, battery: nil)
