@@ -2,7 +2,7 @@
 
 A quick macOS screensaver I made for my own personal use, to monitor my computer's performance (CPU/GPU usage and memory) and see active agents at a glance.
 
-A native, dark macOS screensaver with live system-stat graphs, a dithered cloud field, translucent flip clock with a smaller non-flipping seconds display, live Celsius weather, and a standalone preview app. Built with AppKit and Apple’s ScreenSaver framework; **no web runtime or API key**.
+A native, dark macOS screensaver with live system-stat graphs, a dithered cloud field, translucent flip clock with a smaller non-flipping seconds display, live weather, and a standalone preview app. Built with AppKit and Apple’s ScreenSaver framework; **no web runtime or API key**.
 
 <img width="1467" height="916" alt="Screenshot 2026-11-05 at 10 30 27 PM" src="https://github.com/user-attachments/assets/2a012266-de27-43ed-ad9c-4c5455dca51f" />
 
