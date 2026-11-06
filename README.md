@@ -1,5 +1,7 @@
 # Neosaver
 
+A quick macOS screensaver I made for my own personal use, to monitor my computer's performance (CPU/GPU usage and memory) and see active agents at a glance.
+
 A native, dark macOS screensaver with live system-stat graphs, a dithered cloud field, translucent flip clock with a smaller non-flipping seconds display, live Celsius weather, and a standalone preview app. Built with AppKit and Apple’s ScreenSaver framework; no web runtime or API key.
 
 ## Preview
