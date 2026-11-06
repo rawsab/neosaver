@@ -19,7 +19,9 @@ The preview renders exactly the same view as the screensaver. **⌘F** toggles f
 
 ## Install
 
-Open **build/Neosaver.saver** (or run `./scripts/install.sh`) and choose the current-user installation in macOS’s dialog. Then select **Neosaver** in **System Settings → Screen Saver**. Location settings are also available through **Screen Saver Options**.
+Download **Neosaver.saver.zip** directly from the [GitHub releases page](https://github.com/rawsab/neosaver/releases). Unzip it, open **Neosaver.saver**, and choose the current-user installation in macOS’s dialog. Then select **Neosaver** in **System Settings → Screen Saver**. Location settings are also available through **Screen Saver Options**.
+
+For a local build, open **build/Neosaver.saver** or run `./scripts/install.sh`.
 
 After rebuilding an already installed version, quit System Settings, open the new `.saver`, and replace the old installation. The installed bundle is a copy; rebuilding does not update it automatically.
 
